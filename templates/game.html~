@@ -18,7 +18,7 @@
 Gender<br>
 <input type="radio" value="male">Male<br>
 <input type="radio" value="female">Female<br>
-<input type="radio" value="other">Other<br>
+<input type="radio" value="other">Other<br><br>
 
 <select>
   <option value="nationality">Nationality</option>

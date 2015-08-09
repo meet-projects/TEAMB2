@@ -19,7 +19,7 @@ p {color:red; text-align:center;}
 <body>
 <br> <br> <br>  <h1>NOT NAMED YET PROJECT</h1> <br> <br> <br> <br>
 <p>
-<a href = "{{url_for(start_game)}}"> <br> <br> <br> <br> 
+<a href = "{{url_for('start_game')}}"> <br> <br> <br> <br> 
 <input type="submit" value="sign in"> <br> <br> <br> <br>
 <input type="submit" value="sign up">
 </p>

@@ -3,3 +3,38 @@ body {
 background-image: url('http://cbavideography.com/v1site_images/backgrounds/1356274126_light-textures-01.jpg');
 
 }
+
+
+.sign_in {
+	background-color: blue;
+	 width: 15em;  height: 3em;
+}
+
+
+.sign_up {
+	background-color: yellow;
+	 width: 15em;  height: 3em;
+}
+
+
+.start {
+	background-color: green;
+	 width: 15em;  height: 3em;
+}  
+
+.next {
+	 width: 15em;  height: 3em;
+	background-color: green;
+}
+
+.show_answers {
+	background-color: yellow;
+	 width: 15em;  height: 3em;
+}
+
+.home {
+	background-color: blue;
+ 	width: 15em;  height: 3em;
+}     
+
+

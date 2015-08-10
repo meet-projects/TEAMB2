@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+See The Change
+
+  </title> 
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  
+  
+</head>
+<style>
+
+h1 {color:red; text-align:center;}
+
+p {color:red; text-align:center;}
+</style>
+
+<body>
+
+<p>
+<input type="text" name= "username">
+<input type="password" name="password">
+<a href = "{{url_for('go_home')}}"> <input type="submit" value="home" class = "home"> </a>
+</p>

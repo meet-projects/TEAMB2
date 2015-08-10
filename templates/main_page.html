@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>
-NOT NAMED YET PROJECT
+See The Change
 
   </title> 
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
@@ -11,18 +11,19 @@ NOT NAMED YET PROJECT
 </head>
 <style>
 
-h1 {color:white; text-align:center;}
+h1 {color:red; text-align:center;}
 
 p {color:red; text-align:center;}
 </style>
 
 <body>
-<br> <br> <br>  <h1>NOT NAMED YET PROJECT</h1> <br> <br> <br> <br>
+<br> <br> <br>  <h1>See The Change</h1> <br> <br> <br> <br>
 <p>
-<a href = "{{url_for('start_game')}}">Start </a> <br> <br> <br> <br> 
-<input type="submit" value="sign in"> <br> <br> <br> <br>
-<input type="submit" value="sign up">
+<a href = "{{url_for('start_game')}}"><input type="submit" id = "start" value="start" class = "start"> </a> <br> <br> <br> <br> 
+<input type="submit" id = "sign_in" value="sign in" class = "sign_in"> <br> <br> <br> <br>
+<input type="submit" id = "sign_up" value="sign up" class = "sign_up">
 </p>
+
 
 </body>
 

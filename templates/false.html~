@@ -17,9 +17,9 @@ p {color:red; text-align:center;}
 </style>
 <h1>FALSE!!</h1> <br> <br> <br>
 <p>
-<input type="submit" value="show correct answers"> <br> <br> <br> <br> 
-<input type="submit" value="try again"> <br> <br> <br> <br>
-<input type="submit" value="home">
+<a href = "{{url_for('show_answers,id=picture.id')}}"> <input type="submit" value="show correct answers"> </a> <br> <br> <br> <br>
+<input type="submit" value="next"> <br> <br> <br> <br>
+<a href = "{{url_for('go_home')}}"> <input type="submit" value="home"> </a>
 </p>
 
 <br> <br> <div style="text-align: center;"><img HEIGHT="500" WIDTH="500" src="{{url_for('static', filename= 'falseSnowWhite.gif')}}"></div>

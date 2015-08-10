@@ -14,8 +14,22 @@ session = DBSession()
 
 
 #YOUR WEB APP CODE GOES HERE
-
-
+sofo=Picture(age='21-30',gender='male',nationality='eastern europe+former soviet union',filename='sofo.jpg')
+session.add(sofo)
+session.commit()
+roni=Picture(age='13-20',gender='male',nationality='middle east',filename='roni.png')
+session.add(roni)
+ramesh=Picture(age='21-30',gender='male',nationality='north america',filename='ramesh.png')
+session.add(ramesh)
+george=Picture(age='21-30',gender='male',nationality='north america',filename='george.png')
+session.add(george)
+musa=Picture(age='13-20',gender='male',nationality='middle east',filename='musa.png')
+session.add(musa)
+taylor=Picture(age='21-30',gender='female',nationality='north america',filename='taylor.jpg')
+session.add(taylor)
+noor=Picture(age='13-20',gender='female',nationality='middle east',filename='noor.png')
+session.add(noor)
+session.commit()
 @app.route('/')
 def main():
 	return render_template('main_page.html')
@@ -50,25 +64,27 @@ def start_game():
 	if user_answer_age== picture.age:
 		if user_answer_nationality==picture.nationality:
 			if user_answer_gender==picture.gender:
-				return redirect(url_for('correct_submit'))
+				return redirect(url_for('correct_submit',id=id))
 	
 	return redirect(url_for('wrong_submit'))
 
-@app.route('/game/show_answer')
+@app.route('/game/show_answer/<int:id>')
 def show_answers(id):
 	picture=session.query(Picture).filter_by(id=id).first()	
 	return render_template('show_answers.html', picture=picture)
 
 
-@app.route('/game/correct')
-def correct_submit():
-    return render_template("correct.html")
-@app.route('/game/wrong')
-def wrong_submit():
-    return render_template("false.html")
+@app.route('/game/correct/<int:id>')
+def correct_submit(id):
+	picture=session.query(Picture).filter_by(id=id).first()
+	return render_template("correct.html",picture=picture)
+@app.route('/game/wrong/<int:id>')
+def wrong_submit(id):
+	picture=session.query(Picture).filter_by(id=id).first()
+	return render_template("false.html",picture=picture)
 @app.route('/')
 def go_home():
-    return render_template("main_page.html")                                    
+	return render_template("main_page.html")                                    
     
 if __name__ == '__main__':
     app.run(debug=True)

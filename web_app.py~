@@ -41,6 +41,7 @@ def start_game():
 	return render_template("game.html",picture=picture)
     else:
         id=int(request.form['photo_id'])
+        picture=session.query(Picture).filter_by(id=id).first()
 	user_answer_age=request.form['age']
 	user_answer_nationality=request.form['nationality']
 	user_answer_gender=request.form['gender']
@@ -52,6 +53,12 @@ def start_game():
 				return redirect(url_for('correct_submit'))
 	
 	return redirect(url_for('wrong_submit'))
+
+@app.route('/game/show_answer')
+def show_answers(id):
+	picture=session.query(Picture).filter_by(id=id).first()	
+	return render_template('show_answers.html', picture=picture)
+
 
 @app.route('/game/correct')
 def correct_submit():

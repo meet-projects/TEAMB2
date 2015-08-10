@@ -54,6 +54,12 @@ def start_game():
 	
 	return redirect(url_for('wrong_submit'))
 
+@app.route('/game/show_answer/<int:id>')
+def show_answers(id):
+	picture=session.query(Picture).filter_by(id=id).first()	
+	return render_template('show_answers.html', picture=picture)
+
+
 @app.route('/game/correct')
 def correct_submit():
     return render_template("correct.html")

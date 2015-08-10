@@ -1,18 +1,18 @@
 body {
 
-background-image: url('http://cbavideography.com/v1site_images/backgrounds/1356274126_light-textures-01.jpg');
-
+background-image: url('http://www.graphic-buffet.com/wp-content/uploads/2012/04/cloud-example.jpg');
+background-size : 115%;
 }
 
 
 .sign_in {
-	background-color: blue;
+	background-color: #00ccff;
 	 width: 15em;  height: 3em;
 }
 
 
 .sign_up {
-	background-color: yellow;
+	background-color: #FF9933;
 	 width: 15em;  height: 3em;
 }
 
@@ -24,17 +24,32 @@ background-image: url('http://cbavideography.com/v1site_images/backgrounds/13562
 
 .next {
 	 width: 15em;  height: 3em;
-	background-color: green;
+	background-color:#00ccff ;
 }
 
 .show_answers {
-	background-color: yellow;
+	background-color: #FF9933;
 	 width: 15em;  height: 3em;
 }
 
 .home {
-	background-color: blue;
+	background-color: #CC0066;
  	width: 15em;  height: 3em;
 }     
 
+
+
+.picture {
+	width: 80em;
+	height: 30em;
+	
+}
+
+.img {
+	width: 60em;
+	height: 30em;
+}
+
+p {font-family : Comic Sans MS}
+	
 

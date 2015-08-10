@@ -1,8 +1,11 @@
-<DOCTYPE! HTML>
+<!DOCTYPE html>
 <html>
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
 <body>
-
-<img src="">
+<div style="text-align: center;">
+<img src="{{url_for('static',filename=picture.filename)}}" class = "picture">
 
 <form method="post" action="{{url_for('start_game')}}">
 <input type="hidden" name="photo_id" value="{{picture.id}}">
@@ -38,6 +41,7 @@ Gender<br>
   
 </select> <br><br>
 <input type="submit" value="Submit">
+</div>
 
 
 

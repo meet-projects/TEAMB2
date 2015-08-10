@@ -1,5 +1,55 @@
 body {
 
-background-image: url('http://cbavideography.com/v1site_images/backgrounds/1356274126_light-textures-01.jpg');
-
+background-image: url('http://www.rabne.tk/wp-content/uploads/2015/01/light__4_.png');
+background-size : 115%;
 }
+
+
+.sign_in {
+	background-color: #00ccff;
+	 width: 15em;  height: 3em;
+}
+
+
+.sign_up {
+	background-color: #FF9933;
+	 width: 15em;  height: 3em;
+}
+
+
+.start {
+	background-color: green;
+	 width: 15em;  height: 3em;
+}  
+
+.next {
+	 width: 15em;  height: 3em;
+	background-color:#00ccff ;
+}
+
+.show_answers {
+	background-color: #FF9933;
+	 width: 15em;  height: 3em;
+}
+
+.home {
+	background-color: #CC0066;
+ 	width: 15em;  height: 3em;
+}     
+
+
+
+.picture {
+	width: 80em;
+	height: 30em;
+	
+}
+
+.img {
+	width: 60em;
+	height: 30em;
+}
+
+p {font-family : Comic Sans MS}
+	
+

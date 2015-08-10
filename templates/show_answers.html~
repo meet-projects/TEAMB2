@@ -1,12 +1,15 @@
 <!DOCTYPE HTML>
 <html>
+<head>
+ <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
 <body>
-<
-<img src="{{url_for('static',filename=picture.filename)}}">
-{{picture.age}}
-{{picture.nationality}}
-{{picture.gender}}
-
+<p style = "text-align:center">
+<img src="{{url_for('static',filename=picture.filename)}}" class = "img" align = "middle"> <br>
+AGE:{{picture.age}} <br> 
+NATIONALITY:{{picture.nationality}} <br> 
+GENDER:{{picture.gender}} <br>
+</p>
 
 
 

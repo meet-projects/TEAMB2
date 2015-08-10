@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request, session
+from flask import Flask, render_template,request, session,redirect,url_for
 import random
 app = Flask(__name__)
 
@@ -33,27 +33,33 @@ def false() :
 
 @app.route('/game',methods=['GET','POST'])
 def start_game():
-    pictures=session.query(Picture).all()
-    picture= random.choice(pictures)
+    # pictures=session.query(Picture).all()
+    # picture= random.choice(pictures)
     if request.method=='GET':
-	return render_template("game.html",pictures=pictures)
+        pictures=session.query(Picture).all()
+        picture= random.choice(pictures)
+	return render_template("game.html",picture=picture)
     else:
+        id=int(request.form['photo_id'])
+        picture=session.query(Picture).filter_by(id=id).first()
 	user_answer_age=request.form['age']
 	user_answer_nationality=request.form['nationality']
 	user_answer_gender=request.form['gender']
+        #return "%s %s %s<br>%s %s %s" % (picture.age, picture.nationality, picture.gender, user_answer_age, user_answer_nationality, user_answer_gender)
+        #return request.form['age']
 	if user_answer_age== picture.age:
-		if user_answer_nationality==picutre.age:
+		if user_answer_nationality==picture.nationality:
 			if user_answer_gender==picture.gender:
-				return redirect(url_for('correct.html'))
-	else:
-		return redirect(url_for('wrong.html'))
+				return redirect(url_for('correct_submit'))
+	
+	return redirect(url_for('wrong_submit'))
 
 @app.route('/game/correct')
 def correct_submit():
     return render_template("correct.html")
 @app.route('/game/wrong')
 def wrong_submit():
-    return render_template("wrong.html")
+    return render_template("false.html")
 @app.route('/')
 def go_home():
     return render_template("main_page.html")                                    

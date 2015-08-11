@@ -32,7 +32,7 @@ background-size : 115%;
 	 width: 15em;  height: 3em;
 }
 
-.home {
+.home_submit {
 	background-color: #CC0066;
  	width: 15em;  height: 3em;
 }     
@@ -51,5 +51,10 @@ background-size : 115%;
 }
 
 p {font-family : Comic Sans MS}
-	
+
+
+.heading {
+	color:#CC0066;
+	text-align:center;
+}
 

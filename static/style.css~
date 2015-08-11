@@ -1,6 +1,6 @@
 body {
 
-background-image: url('http://www.rabne.tk/wp-content/uploads/2015/01/light__4_.png');
+background-image: url('http://www.graphic-buffet.com/wp-content/uploads/2012/04/cloud-example.jpg');
 background-size : 115%;
 }
 
@@ -51,5 +51,10 @@ background-size : 115%;
 }
 
 p {font-family : Comic Sans MS}
-	
+
+
+.heading {
+	color:#CC0066;
+	text-align:center;
+}
 

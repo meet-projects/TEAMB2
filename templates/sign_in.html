@@ -2,24 +2,38 @@
 <html>
 <head>
   <title>
-See The Change
+Sign In
 
   </title> 
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
   
   
 </head>
+<h1 class = "heading"> WELCOME TO</h1>
+<br> <br> <div style="text-align: center;"> <img HEIGHT="400" WIDTH="560" src="{{url_for('static', filename= 'unnamed.png')}}">
+
+</div>
 <style>
 
-h1 {color:red; text-align:center;}
 
 p {color:red; text-align:center;}
 </style>
 
 <body>
 
+
+
 <p>
-<input type="text" name= "username">
-<input type="password" name="password">
-<a href = "{{url_for('go_home')}}"> <input type="submit" value="home" class = "home"> </a>
+username <input type="text" name= "username"> <br> <br>
+password <input type="password" name="password"> <br> <br> 
+<input type="submit" value="GO" class = "home_submit"> <br> <br>
+<a href = "{{url_for('go_home')}}"> <input type="submit" value="home" class = "home_submit"> </a>
 </p>
+
+
+</body>
+
+
+
+</html>

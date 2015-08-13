@@ -4,9 +4,8 @@ import random
 app = Flask(__name__)
 
 #SQLAlchemy stuff
-from database_setup import  Picture_Base 
-from database_setup import  Picture 
-from database_setup import  User_Base
+from database_setup import  Picture_Base, Picture 
+#from database_setup import  User_Base
 from database_setup import  User
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -15,7 +14,9 @@ Picture_Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-
+admin = User(user_name='Admin', email='email@admin.com', password='admin')
+#session.add(admin)
+session.commit()
 #YOUR WEB APP CODE GOES HERE
 sofo=Picture(age='21-30',gender='male',nationality='eastern europe+former soviet union',filename='sofo.jpg')
 #session.add(sofo)
@@ -37,12 +38,12 @@ session.commit()
 def main():
 	
 	return render_template('main_page.html')
+@app.route('/')
 def logout():
-
 	web_session.pop('user_name',None)
-	return redirect(url_for('go_home')
-	
-@app.route('/profile'):
+	return redirect(url_for('go_home'))
+
+@app.route('/profile')
 def profile():
 	if 'user_name' in web_session:
 		return render_template('profile.html')
@@ -102,15 +103,19 @@ def go_home():
 @app.route('/sign_up',methods=['GET','POST'])
 def sign_up():
 	if request.method=='GET':
-		return render_tamplate("sign_up.html")
+		return render_template("sign_up.html")
 	else:
 		user_email=request.form['email']
-		user_user_name=request.form['user_name']
+		#return "got here"
+		user_user_name=request.form['username']
+		
 		user_password=request.form['password']
-
-		user=User(user_name='user_user_name', password='user_password',email='user_email')
+		
+		user=User(user_name=user_user_name, password=user_password,email=user_email)
+		
 		session.add(user)
 		session.commit()
+		return redirect(url_for('sign_in'))
 
 @app.route('/sign_in',methods=['GET','POST'])
 def sign_in():
@@ -119,12 +124,21 @@ def sign_in():
 	else:
 		x = session.query(User).filter_by(password=request.form['password'],user_name=request.form['username']).all()                                   
 		if len(x) > 0:
-				web_session['user_name']=request.form['username']
+			web_session['user_name']=request.form['username']
+			return redirect(url_for('profile'))
+		return render_template('sign_in.html')
+@app.route('/upload',methods=['GET','POST'])
+def upload():
+	if request.method=='GET':
+		return render_template("upload.html")
+	else:
+		new_pic=Picture(age=request.form['age'],gender=request.form['gender'],nationality=request.form['nationality'],filename=request.form['url'])
+
+		session.add(new_pic)
+		session.commit()
+		return redirect('profile')			
 			
-				return render_template(profile.html)
-			
-			
-			
+app.secret_key='a'			
     
 if __name__ == '__main__':
     app.run(debug=True)

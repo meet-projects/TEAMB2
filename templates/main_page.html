@@ -17,10 +17,11 @@ p {color:red; text-align:center;}
 </style>
 
 <body>
+>
 <p>
 <a href = "{{url_for('start_game')}}"><input type="submit" id = "start" value="start" class = "start"> </a> <br> <br> <br> <br> 
-<input type="submit" id = "sign_in" value="sign in" class = "sign_in"> <br> <br> <br> <br>
-<input type="submit" id = "sign_up" value="sign up" class = "sign_up">
+<a href="{{url_for('sign_in')}}"><input type="submit" id = "sign_in" value="sign in" class = "sign_in"> </a><br> <br> <br> <br>
+<a href="{{url_for('sign_up')}}"><input type="submit" id = "sign_up" value="sign up" class = "sign_up">
 </p>
 
 

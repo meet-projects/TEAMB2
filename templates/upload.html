@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">-->
-<link rel=stylesheet type=text/css href="../static/style.css">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-<div> <!--<img HEIGHT="90" WIDTH="90" src="{{url_for('static', filename= 'unnamed.png')}}">-->
-<img HEIGHT="90" WIDTH="90" src="../static/unnamed.png">
+<div><img HEIGHT="90" WIDTH="90" src="{{url_for('static', filename= 'unnamed.png')}}">
 </div>
 <br>
 <br>
@@ -17,9 +15,9 @@
 form {color:red; text-align:center;}
 </style>
 
-<form>
+<form method='POST'>
 URL: <input type="text" name= "url"> <br> <br>
-</form>
+
 <br>
 <br>
 
@@ -61,4 +59,5 @@ Gender<br>
   
 </select> <br><br>
 <input type="submit" value="Submit">
+</form>
 </div>

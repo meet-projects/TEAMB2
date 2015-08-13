@@ -9,6 +9,10 @@ CORRECT!!
   
   
 </head>
+<body>
+<div><img HEIGHT="90" WIDTH="90" src="{{url_for('static', filename= 'unnamed.png')}}">
+
+</div>
 <style>
 
 h1 {color:green; text-align:center;}
@@ -23,3 +27,5 @@ p {color:red; text-align:center;}
 </p>
 
 <br> <br> <div style="text-align: center;"> <img HEIGHT="400" WIDTH="450" src="{{url_for('static', filename= 'correctSnowWhite.gif')}}"> </div>
+</body>
+</html>

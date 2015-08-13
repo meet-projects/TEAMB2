@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>
-Sign In
+Profile
 
   </title> 
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
@@ -12,7 +12,6 @@ Sign In
 </head>
 <h1 class = "heading"> WELCOME TO</h1>
 <br> <div style="text-align: center;"> <img HEIGHT="400" WIDTH="560" src="{{url_for('static', filename= 'unnamed.png')}}">
-
 </div>
 <style>
 
@@ -23,12 +22,13 @@ p {color:red; text-align:center;}
 <body>
 
 
-<form action="{{url_for('sign_in')}}" method="POST">
-username <input type="text" name= "username"> <br> <br>
-password <input type="password" name="password"> <br> <br> 
-<input type="submit" value="GO" class = "home_submit"> <br> <br>
-<a href = "{{url_for('go_home')}}"> <input type="submit" value="home" class = "home_submit"> </a>
-</form>
+
+<p>
+<a href = "{{url_for('start_game')}}"><input type="submit" id = "start" value="Start" class = "start"> </a> <br> <br>
+<input type="submit" value="Statistics" class = "home_submit"> <br> <br>
+<a href="{{url_for('upload')}}"><input type="submit" value="Upload" class = "show_answers"> </a><br> <br>
+<a href="{{url_for('logout')}}"<input type="submit" value="Log Out" class = "log_Out"> </a>
+</p>
 
 
 </body>

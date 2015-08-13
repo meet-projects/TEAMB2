@@ -9,7 +9,7 @@ Sign Up
   
 </head>
 <h1 class = "heading"> WELCOME TO</h1>
-<br> <br> <div style="text-align: center;">
+<br> <div style="text-align: center;">
 <img HEIGHT="400" WIDTH="560" src="{{url_for('static', filename= 'unnamed.png')}}">
 
 </div>
@@ -20,15 +20,13 @@ p {color:red; text-align:center;}
 </style>
 
 <body>
-
-
-<p>
+<form method='POST' >
 Email <input type="email" name= "email"> <br> <br>
 username <input type="text" name= "username"> <br> <br> 
 password <input type="password" name="password"> <br> <br>
-<input type="submit" value="Submit" class = "home_submit"> <br> <br>
-<a href = "{{url_for('go_home')}}"> <input type="submit" value="home" class = "home_submit"> </a>
-</p>
+<input type="submit" value="Submit" class = "home_submit"><br> <br>
+
+</form>
 
 
 </body>

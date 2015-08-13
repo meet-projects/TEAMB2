@@ -16,11 +16,11 @@ class Picture(Picture_Base):
         #user=Column(String)
         filename=Column(String)
         
-User_Base= declarative_base()
-class User(User_Base):
+#User_Base= declarative_base()
+class User(Picture_Base):
 	__tablename__='user'
-	id=Column(integer,primary_key=True)
-	email=Column(String,primary_key=True)
-	user_name=Column(String,primary_key=True)
+	id=Column(Integer,primary_key=True)
+	email=Column(String)
+	user_name=Column(String)
 	password=Column(String)
 

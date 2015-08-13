@@ -5,31 +5,40 @@
 <link rel=stylesheet type=text/css href="../static/style.css">
 </head>
 <body>
-<div style="text-align: center;">
-{% if 'http://' in picture.filename %}
-<img src="picture.filename" class = "picture">
-{% else %}
-<img src="{{url_for('static',filename=picture.filename)}}" class = "picture">
-{% endif %}
+<br>
+<br>
+<br>
+<style>
+
+
+form {color:blue; text-align:center;}
+</style>
+
+<form method='POST'>
+URL: <input type="text" name= "url"> <br> <br>
+
 <br>
 <br>
 
-<form method="post" action="{{url_for('start_game')}}">
-<input type="hidden" name="photo_id" value="{{picture.id}}">
+<div style="text-align: center;">
+
 <select name="age" class = "age">
-  <option value="blah">Age</option>
+  <option value="Age">Age</option>
   <option value="0-12">0-12</option>
   <option value="13-20">13-20</option>
   <option value="21-30">21-30</option>
   <option value="31-45">31-45</option>
   <option value="46-60">46-60</option>
   <option value="61+">61+</option>
-</select> <br><br>
+</select> 
+<br>
+<br>
 Gender<br>
 <input type="radio" value="male" name="gender">Male<br>
 <input type="radio" value="female" name="gender">Female<br>
 <input type="radio" value="other" name="gender">Other<br><br>
-
+<br>
+<br>
 <select name="nationality" class = "nationality">
   <option value="catdogshark">Nationality</option>
   <option value="north america">North America</option>
@@ -47,17 +56,6 @@ Gender<br>
 
   
 </select> <br><br>
-<input type="submit" value="Submit" class = "submit">
-</div>
-
-
-
-
-
-
-
-
-
+<input type="submit" value="Submit">
 </form>
-</body>
-</html>
+</div>

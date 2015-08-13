@@ -119,10 +119,18 @@ def sign_in():
 	else:
 		x = session.query(User).filter_by(password=request.form['password'],user_name=request.form['username']).all()                                   
 		if len(x) > 0:
-				web_session['user_name']=request.form['username']
+			web_session['user_name']=request.form['username']
 			
-				return render_template(profile.html)
-			
+			return render_template('profile.html')
+@app.route('/upload',method='POST')
+def upload():
+	if request.method=='GET':
+		return render_tamplate("upload.html)
+	else:
+		new_pic=Picture(age=request.form['age'],gender=request.form['gender'],nationality=request.form['nationality'],filename=request.form['url'])
+
+		session.add(new_pic)
+		session.commit()			
 			
 			
     

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <br> <br> <title>
+<title>
 FALSE !!
 
   </title> 
@@ -10,21 +10,21 @@ FALSE !!
   
 </head>
 <body>
-<div> <img HEIGHT="90" WIDTH="90" src="{{url_for('static', filename= 'unnamed.png')}}">
+<div><img HEIGHT="90" WIDTH="90" src="{{url_for('static', filename= 'unnamed.png')}}">
 </div>
 <style>
 
-h1 {color:red; text-align:center;}
+h1 {color:red; text-align:center; font-size: 55;}
 p {color:red; text-align:center;}
  
 </style>
 <h1>FALSE!!</h1> <br> <br> <br>
 <p >
-<a href = "{{url_for('show_answers',id=picture.id)}}"> <input type="submit" value="show correct answers"> </a> <br> <br> <br> <br>
-<a href = "{{url_for('start_game')}}"> <input type="submit" value="next"> </a><br> <br> <br> <br>
-<a href = "{{url_for('go_home')}}"> <input type="submit" value="home"> </a>
+<a href = "{{url_for('show_answers',id=picture.id)}}"> <input type="submit" value="show correct answers" class = "show_answers"> </a> <br> <br> <br> <br>
+<a href = "{{url_for('start_game')}}"> <input type="submit" value="next" class = "next"> </a><br> <br> <br> <br>
+<a href = "{{url_for('go_home')}}"> <input type="submit" value="home" class = "home_submit"> </a>
 </p>
 
-<br> <br> <div style="text-align: center;"><img HEIGHT="500" WIDTH="500" src="{{url_for('static', filename= 'falseSnowWhite.gif')}}"></div>
+<br> <br> <div style="text-align: center;"><img HEIGHT="300" WIDTH="350" src="{{url_for('static', filename= 'falseSnowWhite.gif')}}"></div>
 </body>
 </html>

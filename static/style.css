@@ -1,7 +1,7 @@
 body {
 
 background-image: url('http://www.graphic-buffet.com/wp-content/uploads/2012/04/cloud-example.jpg');
-background-size : 115%;
+background-size : 130%;
 font-family: "Times New Roman", Times, serif;
 }
 
@@ -37,6 +37,7 @@ font-family: "Times New Roman", Times, serif;
 	background-color: #CC0066;
  	width: 15em;  height: 3em;
 	text-align: center;
+	
 }     
 
 
@@ -84,5 +85,7 @@ p {font-family : Comic Sans MS}
 
 
 
-	
+#submit_1 {
+	margin-left: 550px;
+}	
 

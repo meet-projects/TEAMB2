@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <br> <br> <title>
+<title>
 CORRECT!!
 
-  </title> 
+</title> 
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
   
   
 </head>
 <body>
 <div><img HEIGHT="90" WIDTH="90" src="{{url_for('static', filename= 'unnamed.png')}}">
-
 </div>
 <style>
 
-h1 {color:green; text-align:center;}
+h1 {color:green; text-align:center; font-size: 45;}
 p {color:red; text-align:center;}
  
 </style>
@@ -23,9 +22,9 @@ p {color:red; text-align:center;}
 <p>
 <a href = "{{url_for('show_answers',id=picture.id)}}"> <input type="submit" value="show correct answers" class = "show_answers"> </a> <br> <br> <br> <br> 
 <a href = "{{url_for('start_game')}}"> <input type="submit" value="next" class= "next"> </a> <br> <br> <br> <br>
-<a href = "{{url_for('go_home')}}"> <input type="submit" value="home" class = "home"> </a>
+<a href = "{{url_for('go_home')}}"> <input type="submit" value="home" class = "home_submit"> </a>
 </p>
 
-<br> <br> <div style="text-align: center;"> <img HEIGHT="400" WIDTH="450" src="{{url_for('static', filename= 'correctSnowWhite.gif')}}"> </div>
+<br> <br> <div style="text-align: center;"> <img HEIGHT="300" WIDTH="350" src="{{url_for('static', filename= 'correctSnowWhite.gif')}}"> </div>
 </body>
 </html>

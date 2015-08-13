@@ -8,11 +8,11 @@
 <div><img HEIGHT="90" WIDTH="90" src="{{url_for('static', filename= 'unnamed.png')}}">
 </div>
 <p style = "text-align:center">
-<{% if 'http://' in picture.filename %}
+{% if 'http://' in picture.filename %}
 <img src="{{picture.filename}}" class = "picture">
 {% else %}
 <img src="{{url_for('static',filename=picture.filename)}}" class = "picture">
-{% endif %} class = "img" align = "middle"> <br>
+{% endif %}<br>
 <br> <br>AGE:{{picture.age}} <br> 
 <br> <br> NATIONALITY:{{picture.nationality}} <br> 
 <br> <br>GENDER:{{picture.gender}} <br>

@@ -2,6 +2,7 @@ body {
 
 background-image: url('http://www.graphic-buffet.com/wp-content/uploads/2012/04/cloud-example.jpg');
 background-size : 115%;
+font-family: "Times New Roman", Times, serif;
 }
 
 
@@ -35,13 +36,14 @@ background-size : 115%;
 .home_submit {
 	background-color: #CC0066;
  	width: 15em;  height: 3em;
+	text-align: center;
 }     
 
 
 
 .picture {
-	width: 80em;
-	height: 30em;
+	width: 60em;
+	height: 20em;
 	
 }
 
@@ -60,23 +62,27 @@ p {font-family : Comic Sans MS}
 
 
 .nationality{
-	background-color: #FF9933;
 	 width: 15em;  height: 3em;
 }
 
 .age{
-	background-color: #CC0066;
  	width: 15em;  height: 3em;
 }
 
 
 .statistics {
-	font-family: "Times New Roman", Times, serif;
 	color:green;
 	text-align:center;
 	font-size: 60;
 } 
 	
-	
+.submit {
+	width: 15em;
+	height: 3em;
+	text-align: center;
+}
+
+
+
 	
 

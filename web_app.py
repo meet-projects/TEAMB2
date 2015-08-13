@@ -99,6 +99,9 @@ def wrong_submit(id):
 	return render_template("false.html",picture=picture)
 @app.route('/')
 def go_home():
+	if 'user_name' in web_session:
+		return render_template('profile.html')
+	
 	return render_template("main_page.html")
 @app.route('/sign_up',methods=['GET','POST'])
 def sign_up():
@@ -142,5 +145,3 @@ app.secret_key='a'
     
 if __name__ == '__main__':
     app.run(debug=True)
-
-

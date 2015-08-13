@@ -1,10 +1,13 @@
-from flask import Flask, render_template,request, session,redirect,url_for
+from flask import Flask, render_template,request,redirect,url_for
+from flask import session as web_session
 import random
 app = Flask(__name__)
 
 #SQLAlchemy stuff
 from database_setup import  Picture_Base 
 from database_setup import  Picture 
+from database_setup import  User_Base
+from database_setup import  User
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 engine = create_engine('sqlite:///crudlab.db')
@@ -32,8 +35,19 @@ noor=Picture(age='13-20',gender='female',nationality='middle east',filename='noo
 session.commit()
 @app.route('/')
 def main():
+	
 	return render_template('main_page.html')
+def logout():
 
+	web_session.pop('user_name',None)
+	return redirect(url_for('go_home')
+	
+@app.route('/profile'):
+def profile():
+	if 'user_name' in web_session:
+		return render_template('profile.html')
+	
+	
 @app.route('/correct')
 def correct() :
 	return render_template('correct.html')
@@ -84,7 +98,33 @@ def wrong_submit(id):
 	return render_template("false.html",picture=picture)
 @app.route('/')
 def go_home():
-	return render_template("main_page.html")                                    
+	return render_template("main_page.html")
+@app.route('/sign_up',methods=['GET','POST'])
+def sign_up():
+	if request.method=='GET':
+		return render_tamplate("sign_up.html")
+	else:
+		user_email=request.form['email']
+		user_user_name=request.form['user_name']
+		user_password=request.form['password']
+
+		user=User(user_name='user_user_name', password='user_password',email='user_email')
+		session.add(user)
+		session.commit()
+
+@app.route('/sign_in',methods=['GET','POST'])
+def sign_in():
+	if request.method=='GET':
+		return render_template("sign_in.html")
+	else:
+		x = session.query(User).filter_by(password=request.form['password'],user_name=request.form['username']).all()                                   
+		if len(x) > 0:
+				web_session['user_name']=request.form['username']
+			
+				return render_template(profile.html)
+			
+			
+			
     
 if __name__ == '__main__':
     app.run(debug=True)

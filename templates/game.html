@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<!--<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">-->
+<link rel=stylesheet type=text/css href="../static/style.css">
 </head>
 <body>
 <div style="text-align: center;">
@@ -11,7 +12,7 @@
 
 <form method="post" action="{{url_for('start_game')}}">
 <input type="hidden" name="photo_id" value="{{picture.id}}">
-<select name="age">
+<select name="age" class = "age">
   <option value="blah">Age</option>
   <option value="0-12">0-12</option>
   <option value="13-20">13-20</option>
@@ -25,7 +26,7 @@ Gender<br>
 <input type="radio" value="female" name="gender">Female<br>
 <input type="radio" value="other" name="gender">Other<br><br>
 
-<select name="nationality">
+<select name="nationality" class = "nationality">
   <option value="catdogshark">Nationality</option>
   <option value="north america">North America</option>
   <option value="central america">Central America</option>
@@ -42,7 +43,7 @@ Gender<br>
 
   
 </select> <br><br>
-<input type="submit" value="Submit">
+<input type="submit" value="Submit" class = "submit">
 </div>
 
 

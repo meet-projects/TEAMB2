@@ -9,7 +9,7 @@ See The Change
   
   
 </head>
-<br> <br> <div style="text-align: center;"> <img HEIGHT="400" WIDTH="560" src="{{url_for('static', filename= 'unnamed.png')}}"> </div>
+<br> <div style="text-align: center;"> <img HEIGHT="400" WIDTH="560" src="{{url_for('static', filename= 'unnamed.png')}}"> </div>
 <style>
 
 

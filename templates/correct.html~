@@ -22,4 +22,4 @@ p {color:red; text-align:center;}
 <a href = "{{url_for('go_home')}}"> <input type="submit" value="home" class = "home"> </a>
 </p>
 
-<br> <br> <div style="text-align: center;"> <img HEIGHT="500" WIDTH="500" src="{{url_for('static', filename= 'correctSnowWhite.gif')}}"> </div>
+<br> <br> <div style="text-align: center;"> <img HEIGHT="400" WIDTH="450" src="{{url_for('static', filename= 'correctSnowWhite.gif')}}"> </div>

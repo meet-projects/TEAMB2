@@ -69,6 +69,13 @@ p {font-family : Comic Sans MS}
  	width: 15em;  height: 3em;
 }
 
+
+.statistics {
+	font-family: "Times New Roman", Times, serif;
+	color:green;
+	text-align:center;
+	font-size: 60;
+} 
 	
 	
 	

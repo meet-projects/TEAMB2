@@ -1,9 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<title> Show Correct Answers </title>
  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+<div> <!--<img HEIGHT="90" WIDTH="90" src="{{url_for('static', filename= 'unnamed.png')}}">-->
+<img HEIGHT="90" WIDTH="90" src="../static/unnamed.png">
+</div>
 <p style = "text-align:center">
 <img src="{{url_for('static',filename=picture.filename)}}" class = "img" align = "middle"> <br>
 <br> <br>AGE:{{picture.age}} <br> 
